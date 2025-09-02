@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bond Back Cleaning Guide for Brisbane Tenants</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideInRight 1s ease-out 0.4s both;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out 0.6s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #4a5568;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: #2d3748;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #4a5568;
+            font-size: 1.1rem;
+        }
+
+        .checklist-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .room-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .room-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .room-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .room-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            background: #f8f9fa;
+            margin: 8px 0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        li:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+
+        .cost-section {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .cost-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cost-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .cost-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .tip-card h4 {
+            color: #d69e2e;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .pros, .cons {
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .pros {
+            background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+        }
+
+        .cons {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        }
+
+        .mistakes-section {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .final-tips {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #eae066 0%, #c1ab00 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+            margin: 20px 0;
+        }
+
+        .step {
+            counter-increment: step-counter;
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+            padding-left: 70px;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+            
+            .cost-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>🏠 Bond Back Cleaning Guide</h1>
+            <p>Your complete roadmap to getting your full bond back in Brisbane</p>
+        </div>
+
+        <div class="content">
+            <h2>What Is Bond Back Cleaning?</h2>
+            <p>Bond back cleaning, also called end of lease cleaning or vacate cleaning, is a deep and detailed clean of a rental property before you hand back the keys.</p>
+            <p>The goal is simple: to return the home in the same clean condition it was in when you moved in, as recorded in your entry condition report. Landlords and property managers will compare the current state of the property against this report during the final inspection.</p>
+            <p>If the property isn't up to standard, they can withhold part (or all) of your bond to cover professional cleaning costs.</p>
+            <p><a href="https://bondcleaningbrisbane.pages.dev/
+">bond back cleaning in Brisbane</a></p>
+        </div>
+
+        <div class="highlight-box">
+            <h3>💰 Why Is It So Important in Brisbane?</h3>
+            <p>In Brisbane, bond deposits can be several weeks' rent – often thousands of dollars. Losing even a portion of this can hurt your moving budget. Property managers are quite strict and expect every corner of the home to be cleaned, including places you might not think of, like ceiling fans, skirting boards, and window tracks.</p>
+            <p><a href="https://end-of-lease-cleaning-guide-brisban.vercel.app/">End of lease cleaning guide Brisbane</a></p>
+        </div>
+
+        <div class="content">
+            <div class="checklist-section">
+                <h2>📋 Bond Back Cleaning Checklist</h2>
+                <p>Here's a room-by-room guide to what you should clean before your inspection:</p>
+
+                <div class="room-section">
+                    <div class="room-title">
+                        <div class="room-icon">🍳</div>
+                        Kitchen
+                    </div>
+                    <ul>
+                        <li>Clean the oven inside and out, including trays and racks</li>
+                        <li>Degrease the stovetop, knobs, and rangehood filters</li>
+                        <li>Wipe cupboards inside and outside</li>
+                        <li>Clean the sink, taps, and splashback</li>
+                        <li>Remove food crumbs and stains from benchtops</li>
+                    </ul>
+                </div>
+
+                <div class="room-section">
+                    <div class="room-title">
+                        <div class="room-icon">🚿</div>
+                        Bathroom
+                    </div>
+                    <ul>
+                        <li>Scrub the shower, bath, tiles, and grout</li>
+                        <li>Remove mould and soap scum</li>
+                        <li>Clean the toilet bowl, seat, and behind the toilet</li>
+                        <li>Polish mirrors, sinks, and taps</li>
+                        <li>Wipe cupboards and exhaust fans</li>
+                    </ul>
+                </div>
+
+                <div class="room-section">
+                    <div class="room-title">
+                        <div class="room-icon">🛏️</div>
+                        Bedrooms and Living Areas
+                    </div>
+                    <ul>
+                        <li>Vacuum carpets (steam clean if required)</li>
+                        <li>Wipe walls, doors, and skirting boards</li>
+                        <li>Clean wardrobes, cupboards, and shelves</li>
+                        <li>Wash blinds and curtains</li>
+                        <li>Clean windows, sills, and tracks</li>
+                    </ul>
+                </div>
+
+                <div class="room-section">
+                    <div class="room-title">
+                        <div class="room-icon">🧺</div>
+                        Laundry
+                    </div>
+                    <ul>
+                        <li>Wipe sinks and taps</li>
+                        <li>Clean behind the washing machine or dryer if provided</li>
+                        <li>Remove lint from the dryer filter</li>
+                    </ul>
+                </div>
+
+                <div class="room-section">
+                    <div class="room-title">
+                        <div class="room-icon">🌱</div>
+                        Outdoor Areas
+                    </div>
+                    <ul>
+                        <li>Sweep balconies, patios, or verandas</li>
+                        <li>Remove weeds and mow the lawn if you had a garden</li>
+                        <li>Clean the garage floor and remove oil stains</li>
+                        <li>Empty and disinfect bins</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>🎯 Step-by-Step Preparation Tips</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Review Your Lease Agreement</h3>
+                    <p>Some leases require extra services, such as professional carpet steam cleaning or pest control if you had pets. Check carefully to avoid missing important conditions.</p>
+                </div>
+                <div class="step">
+                    <h3>Compare with the Entry Condition Report</h3>
+                    <p>Look at the condition noted when you first moved in. That's the standard you need to match or exceed.</p>
+                </div>
+                <div class="step">
+                    <h3>Gather Supplies Early</h3>
+                    <p>Stock up on multi-purpose cleaner, oven cleaner, carpet cleaner, glass spray, mop, broom, vacuum, cloths, sponges, and gloves.</p>
+                </div>
+                <div class="step">
+                    <h3>Clean in Stages</h3>
+                    <p>Instead of leaving everything for one day, spread tasks over a week. Start with rooms you use less and finish with the kitchen and bathroom.</p>
+                </div>
+                <div class="step">
+                    <h3>Do a Mock Inspection</h3>
+                    <p>Once done, walk through the property with a critical eye. Check corners, cupboards, and window sills – these small details often cost tenants their bond.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>🤔 Should You Hire Professional Bond Cleaners?</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3>✅ DIY Bond Cleaning</h3>
+                    <p><strong>Pros:</strong> Saves money, full control over the process.</p>
+                    <p><strong>Cons:</strong> Time-consuming, easy to miss details, may not meet professional standards.</p>
+                </div>
+                <div class="cons">
+                    <h3>👨‍🔧 Professional Bond Cleaning</h3>
+                    <p><strong>Pros:</strong> Saves time, cleaners know exactly what property managers expect, many offer a bond-back guarantee.</p>
+                    <p><strong>Cons:</strong> Higher cost.</p>
+                </div>
+            </div>
+            <p>For small properties or if you enjoy cleaning, DIY may work. But if you're short on time, have a large property, or your landlord is very strict, hiring professionals can be worth it.</p>
+        </div>
+
+        <div class="cost-section">
+            <h2>💰 Bond Back Cleaning Costs in Brisbane</h2>
+            <p>Costs depend on the size of the property and services required. On average:</p>
+            <div class="cost-grid">
+                <div class="cost-item">
+                    <h4>1-bedroom unit</h4>
+                    <p>$200 – $300</p>
+                </div>
+                <div class="cost-item">
+                    <h4>2-bedroom apartment</h4>
+                    <p>$300 – $400</p>
+                </div>
+                <div class="cost-item">
+                    <h4>3-bedroom house</h4>
+                    <p>$400 – $600</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;">Extras like carpet steam cleaning, pest control, and garden care may cost extra. Always ask for a detailed quote upfront to avoid surprises.</p>
+        </div>
+
+        <div class="mistakes-section">
+            <h2>❌ Common Mistakes That Cost Tenants Their Bond</h2>
+            <ul>
+                <li><strong>Leaving it to the last minute:</strong> Rushing leads to missed spots</li>
+                <li><strong>Forgetting outdoor areas:</strong> Patios, balconies, and garages often get overlooked</li>
+                <li><strong>Skipping the oven:</strong> Property managers always check ovens</li>
+                <li><strong>Not cleaning windows properly:</strong> Dirty glass and tracks stand out during inspections</li>
+                <li><strong>Using the wrong products:</strong> Harsh cleaners can damage surfaces and create new problems</li>
+            </ul>
+        </div>
+
+        <div class="tips-section">
+            <h2>💡 Simple Tricks to Make Bond Cleaning Easier</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>Work Top to Bottom</h4>
+                    <p>Clean fans and shelves first, then finish with the floors.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Use Natural Cleaners</h4>
+                    <p>Vinegar and baking soda work wonders on stains and odours.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Let Products Sit</h4>
+                    <p>Don't scrub immediately – give oven cleaner or bathroom spray time to work.</p>
+                </div>
+                <div class="tip-card">
+                    <h4>Get Extra Hands</h4>
+                    <p>Ask friends or family to help, especially for large homes.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>🔍 What If the Property Manager Isn't Happy?</h2>
+            <p>Sometimes, even after cleaning, the property manager may request extra work. Don't panic.</p>
+            <ul>
+                <li>If you cleaned yourself, you can go back and fix the issues</li>
+                <li>If you hired professionals, call them – many companies offer a free re-clean guarantee if the agent isn't satisfied</li>
+            </ul>
+        </div>
+
+        <div class="final-tips">
+            <h2>🎉 Final Thoughts</h2>
+            <p>Bond back cleaning in Brisbane is a detailed process, but with the right preparation, you can make it smooth and stress-free. Remember, the key is to leave the property in the same condition as when you moved in.</p>
+            
+            <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 12px;">
+                    <h4>✨ Start Early</h4>
+                </div>
+                <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 12px;">
+                    <h4>📝 Follow a Checklist</h4>
+                </div>
+                <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 12px;">
+                    <h4>🔍 Pay Attention to Details</h4>
+                </div>
+                <div style="background: rgba(255,255,255,0.3); padding: 20px; border-radius: 12px;">
+                    <h4>⚖️ Choose DIY or Professional</h4>
+                </div>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 1.2rem; font-weight: 600;">Do this, and you'll hand back the keys with confidence, knowing your bond is safe! 🔑</p>
+        </div>
+        <div class="content">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453477.6536737166!2d152.99319645!3d-27.3821429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7e118c118e2610b%3A0xf89b29525cbc3f98!2sBond%20Cleaning%20Service!5e0!3m2!1sen!2sin!4v1756789809857!5m2!1sen!2sin" width="600" height="450" style="border:0;align:center;text-align: center;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+
+    <script>
+        // Scroll indicator
+        window.addEventListener('scroll', () => {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animation to all sections
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.room-section, .step, .tip-card, .cost-item');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.6s ease';
+                section.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(section);
+            });
+        });
+
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.room-section, .tip-card, .step').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
